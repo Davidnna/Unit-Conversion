@@ -11,21 +11,23 @@
             <div class="head">
                 <label for="number">Metric/Imperial Unit Conversion</label>
                 <input type="number" name="number" id="number">
+                <p id="error">Input a valid number</p>
                 <button id="btn" onclick="convert()">Convert</button>
             </div>
             <div class="details">
                 <div>
                     <h2>Length (Meter/Feet)</h2>
-                    <p id="length">00 meters = 00.000 feet | 00 feet = 00.000 meters</p>
+                    <p id="length"><span onclick="copyText('00')">00</span> meters = <span onclick="copyText('00.000')">00.000</span> feet | <span onclick="copyText('00')">00</span> feet = <span onclick="copyText('00.000')">00.000</span> meters</p>
                 </div>
                 <div>
                     <h2>Volume (Liters/Gallons)</h2>
-                    <p id="volume">00 liters = 00.000 gallons | 00 gallons = 00.000 liters</p>
+                    <p id="volume"><span onclick="copyText('00')">00</span> liters = <span onclick="copyText('00.000')">00.000</span> gallons | <span onclick="copyText('00')">00</span> gallons = <span onclick="copyText('00.000')">00.000</span> liters</p>
                 </div>
                 <div>
                     <h2>Mass (Kilograms/Pounds)</h2>
-                    <p id="mass">00 kilos = 00.000 pounds | 00 pounds = 00.000 kilos</p>
+                    <p id="mass"><span onclick="copyText('00')">00</span> kilos = <span onclick="copyText('00.000')">00.000</span> pounds | <span onclick="copyText('00')">00</span> pounds = <span onclick="copyText('00.000')">00.000</span> kilos</p>
                 </div>
+			    <p id="copied">Copied!</p>
             </div>
         </div>
         <script src="script.js"></script>

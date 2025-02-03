@@ -60,6 +60,12 @@ label {
     -webkit-appearance: none;
 }
 
+#error {
+    color: red;
+    display: none;
+    margin: 0 0 1em;
+}
+
 #btn {
     background: #FFFFFF;
     color: #3D3D3D;
@@ -98,6 +104,10 @@ label {
 .details div p {
     word-wrap: break-word;
     overflow-wrap: break-word;
+}
+
+.details div p span:hover {
+    text-decoration: underline;
 }
 
 #copied {
