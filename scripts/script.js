@@ -1,3 +1,4 @@
+const form = document.getElementById("form");
 const number = document.getElementById("number");
 const length = document.getElementById("length");
 const volume = document.getElementById("volume");
@@ -8,6 +9,14 @@ const foot = 3.281;
 const gallon = 0.264;
 const pound = 2.204;
 
+// If 'e' key is pressed, prevent the default action
+number.addEventListener('keydown', (event) => {
+    if (event.key === 'e' || event.key === 'E') {
+      event.preventDefault();
+    }
+});
+
+// Adjust the width as numbers are typed, and always show appropriate display
 number.addEventListener("input", function () {
     number.style.width = (number.value.length + 2.5) + "ch";
     if (number.value.length < 2) {
@@ -17,6 +26,13 @@ number.addEventListener("input", function () {
     }
 });
 
+// Prevent form from submitting
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    convert();
+});
+
+// Convert to units
 function convert() {
     if (number.value === "" || number.value === "00") {
         error.style.display = "block";
@@ -36,6 +52,7 @@ function convert() {
     }
 }
 
+// Copy text when clicked and display in front end
 function copyText(char) {
     navigator.clipboard.writeText(char).then(() => {
         copied.style.display = "block";

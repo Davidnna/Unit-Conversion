@@ -3,34 +3,40 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/jpeg" href="favicon.jpeg">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/jpeg" href="images/unit-conversion.jpg">
+        <!-- <link rel="icon" type="image/jpg" href="https://i.postimg.cc/SRp3w4tk/unit-conversion.jpg"> -->
+        <link rel="stylesheet" href="styles/styles.css">
         <title>Metric/Imperial Unit Conversion</title>
     </head>
     <body>
-        <div class="container">
-            <div class="head">
+        <main class="container">
+            <!-- Input -->
+            <form id="form">
                 <label for="number">Metric/Imperial Unit Conversion</label>
                 <input type="number" name="number" id="number">
                 <p id="error">Input a valid number</p>
-                <button type="button" id="btn" onclick="convert()">Convert</button>
-            </div>
+                <button type="submit" id="btn">Convert</button>
+            </form>
+            <!-- Result -->
             <div class="details">
+                <!-- Length -->
                 <div>
                     <h2>Length (Meter/Feet)</h2>
                     <p id="length"><span onclick="copyText('00')">00</span> meters = <span onclick="copyText('00.000')">00.000</span> feet | <span onclick="copyText('00')">00</span> feet = <span onclick="copyText('00.000')">00.000</span> meters</p>
                 </div>
+                <!-- Volume -->
                 <div>
                     <h2>Volume (Liters/Gallons)</h2>
                     <p id="volume"><span onclick="copyText('00')">00</span> liters = <span onclick="copyText('00.000')">00.000</span> gallons | <span onclick="copyText('00')">00</span> gallons = <span onclick="copyText('00.000')">00.000</span> liters</p>
                 </div>
+                <!-- Mass -->
                 <div>
                     <h2>Mass (Kilograms/Pounds)</h2>
                     <p id="mass"><span onclick="copyText('00')">00</span> kilos = <span onclick="copyText('00.000')">00.000</span> pounds | <span onclick="copyText('00')">00</span> pounds = <span onclick="copyText('00.000')">00.000</span> kilos</p>
                 </div>
 			    <p id="copied">Copied!</p>
             </div>
-        </div>
-        <script src="script.js"></script>
+        </main>
+        <script src="scripts/script.js"></script>
     </body>
 </html>
